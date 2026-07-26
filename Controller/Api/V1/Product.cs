@@ -38,7 +38,8 @@ namespace Summary.Liyam.Controller.Api.V1
         {
             var inputs = new Dictionary<string, object>
             {
-                { "Liyam.Product.Id", model.Entity.FullCode },
+                { "Liyam.Product.Id", model.Entity.GoodsId },
+                { "Liyam.Product.FullCode", model.Entity.FullCode },
                  { "Liyam.Product.Title", model.Entity.Title },
                  { "Liyam.Product.Category", model.Entity.GoodsGroup_Title }
             };
