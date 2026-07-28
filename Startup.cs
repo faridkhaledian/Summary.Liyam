@@ -17,6 +17,9 @@ namespace Summary.Liyam
             services.AddScoped<IPermissionProvider, Permissions>();
             services.AddScoped<IDisplayDriver<ISite>, LiyamSettingsDisplayDriver>();
             services.AddTransient<IConfigureOptions<LiyamSettings>, LiyamSettingsConfiguration>();
+
+            services.AddActivity<CreateProductEventInLiyam, CreateProductEventDisplay>();
+            services.AddActivity<UpdateProductEventInLiyam, UpdateProductEventDisplay>();
         }
     }
 }
