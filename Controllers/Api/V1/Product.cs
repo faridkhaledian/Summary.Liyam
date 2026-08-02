@@ -17,10 +17,10 @@ namespace Summary.Liyam.Controller.Api.V1
     [Authorize(AuthenticationSchemes = "Api")]
     [EnableCors("Everywhere")]
     [Route("api/v1/liyam/product")]
-    public class Product : ControllerBase
+    public class ProductController : ControllerBase
     {
         private readonly IWorkflowManager _workflowManager;
-        public Product(
+        public ProductController(
             IWorkflowManager workflowManager)
         {
             _workflowManager = workflowManager;
