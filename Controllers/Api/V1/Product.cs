@@ -29,26 +29,21 @@ namespace Summary.Liyam.Controller.Api.V1
         [HttpPost, Route("[action]")]
         public async Task<IActionResult> Submit([FromBody] ProductSubmitModel model)
         {
-            await RaiseSubmitOrder(model);
-
-            return Ok();
-        }
-
-        private async Task RaiseSubmitOrder(ProductSubmitModel model)
-        {
             var inputs = new Dictionary<string, object>
             {
                 { "Liyam.Product.Id", model.Entity.GoodsId },
-                { "Liyam.Product.FullCode", model.Entity.FullCode },
+                { "Liyam.Product.Code", model.Entity.FullCode },
                 { "Liyam.Product.Title", model.Entity.Title },
                 { "Liyam.Product.Category", model.Entity.GoodsGroup_Title }
             };
 
-            var eventName = model.ActionType == "Create"
-            ? nameof(CreateProductEventInLiyam)
-            : nameof(UpdateProductEventInLiyam);
+            var event_name = model.ActionType.ToLower() == "create" ?
+                nameof(CreateProductEventInLiyam) :
+                nameof(UpdateProductEventInLiyam);
 
-            await _workflowManager.TriggerIntoDBAsync(eventName, inputs);
+            await _workflowManager.TriggerIntoDBAsync(event_name, inputs);
+
+            return Ok();
         }
     }
 }
