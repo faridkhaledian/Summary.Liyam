@@ -7,6 +7,9 @@ namespace Summary.Liyam
     using Core.Navigation;
     using Core.Security.Permissions;
     using Core.Settings;
+    using Core.Workflows.Helpers;
+    using Summary.Liyam.Workflows.Event.Product.Create;
+    using Summary.Liyam.Workflows.Event.Product.Update;
 
     [Feature(Liyam.Features.Liyam)]
     public class Startup : StartupBase
@@ -18,8 +21,8 @@ namespace Summary.Liyam
             services.AddScoped<IDisplayDriver<ISite>, LiyamSettingsDisplayDriver>();
             services.AddTransient<IConfigureOptions<LiyamSettings>, LiyamSettingsConfiguration>();
 
-            services.AddActivity<CreateProductEventInLiyam, CreateProductEventDisplay>();
-            services.AddActivity<UpdateProductEventInLiyam, UpdateProductEventDisplay>();
+            services.AddActivity<CreateProductEventInLiyamTask, CreateProductEventInLiyamDisplay>();
+            services.AddActivity<UpdateProductEventInLiyamTask, UpdateProductEventInLiyamDisplay>();
         }
     }
 }

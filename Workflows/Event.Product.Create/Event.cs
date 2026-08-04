@@ -1,25 +1,24 @@
-using Microsoft.Extensions.Localization;
 using Core.Workflows.Abstractions.Models;
 using Core.Workflows.Activities;
 using Core.Workflows.Models;
+using Microsoft.Extensions.Localization;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Summary.Liyam.Workflows.Event.Product.Create
 {
-    public class CreateProductEventInLiyam : EventActivity
+    public class CreateProductEventInLiyamTask : EventActivity
     {
-        private readonly IStringLocalizer<CreateProductEventInLiyam> T;
+        private readonly IStringLocalizer<CreateProductEventInLiyamTask> T;
 
-        public CreateProductEventInLiyam(
-            IStringLocalizer<CreateProductEventInLiyam> t)
+        public CreateProductEventInLiyamTask(
+            IStringLocalizer<CreateProductEventInLiyamTask> t)
         {
             T = t;
         }
 
-        public override string Name => nameof(CreateProductEventInLiyam);
+        public override string Name => nameof(CreateProductEventInLiyamTask);
 
-        public override LocalizedString DisplayText => T[Liyam.Localize.SOfCreateProductEvent];
+        public override LocalizedString DisplayText => T[Liyam.Localize.SOfCreateProduct];
 
         public override LocalizedString Category => T[Liyam.Public.Category];
 
@@ -30,7 +29,7 @@ namespace Summary.Liyam.Workflows.Event.Product.Create
             return Outcomes(T[Liyam.Workflows.Done]);
         }
 
-        public override async Task<ActivityExecutionResult> ResumeAsync(
+        public override ActivityExecutionResult Resume(
             WorkflowExecutionContext workflowContext,
             ActivityContext activityContext)
         {

@@ -7,10 +7,10 @@ namespace Summary.Liyam
     {
         public string EntityName { get; set; }
         public string ActionType { get; set; }
-        public Goods Entity { get; set; }
+        public GoodsInfo Entity { get; set; }
     }
 
-    public class Goods
+    public class GoodsInfo
     {
         public string CostOrIncomeStr { get; set; }
         public string GoodsTypeStr { get; set; }
