@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Core.Workflows.Display;
 
 namespace Summary.Liyam.Workflows.Event.Product.Update
 {
-   public class UpdateProductEventDisplay : ActivityDisplayDriver<UpdateProductEventInLiyam>
+   public class UpdateProductEventInLiyamDisplay : ActivityDisplayDriver<UpdateProductEventInLiyamTask>
     { }
 }
