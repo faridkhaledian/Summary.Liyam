@@ -15,7 +15,6 @@ namespace Summary.Liyam.Controller.Api.V1
     [AllowAnonymous]
     [IgnoreAntiforgeryToken]
     [Authorize(AuthenticationSchemes = "Api")]
-    [EnableCors("Everywhere")]
     [Route("api/v1/liyam/product")]
     public class ProductController : ControllerBase
     {
