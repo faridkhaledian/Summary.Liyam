@@ -25,6 +25,10 @@ namespace Summary.Liyam
             public const string DOfCreateProduct = "این رویداد زمانی فراخوانی میشود که محصولی در حسابداری لیام به صف همگام سازی ارسال شود.";
             public const string SOfUpdateProduct = "رویداد ویرایش محصول";
             public const string DOfUpdateProduct = "این رویداد زمانی فراخوانی میشود که محصولی در حسابداری لیام به صف همگام سازی ارسال شود.";
+            public const string SOfCreateIdentity = "رویداد ثبت هویت جدید";
+            public const string DOfCreateIdentity = "این رویداد زمانی فراخوانی میشود که هویتی در حسابداری لیام به صف همگام سازی ارسال شود.";
+            public const string SOfUpdateIdentity = "رویداد ویرایش هویت";
+            public const string DOfUpdateIdentity = "این رویداد زمانی فراخوانی میشود که هویتی در حسابداری لیام به صف همگام سازی ارسال شود.";
         }
     }
 }
