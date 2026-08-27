@@ -6,17 +6,17 @@ using System.Collections.Generic;
 
 namespace Summary.Liyam.Workflows.Event.Identity.Update
 {
-    public class UpdateIdentityEventInLiyam : EventActivity
+    public class UpdateIdentityInLiyamEvent : EventActivity
     {
-        private readonly IStringLocalizer<UpdateIdentityEventInLiyam> T;
+        private readonly IStringLocalizer<UpdateIdentityInLiyamEvent> T;
 
-        public UpdateIdentityEventInLiyam(
-            IStringLocalizer<UpdateIdentityEventInLiyam> t)
+        public UpdateIdentityInLiyamEvent(
+            IStringLocalizer<UpdateIdentityInLiyamEvent> t)
         {
             T = t;
         }
 
-        public override string Name => nameof(UpdateIdentityEventInLiyam);
+        public override string Name => nameof(UpdateIdentityInLiyamEvent);
 
         public override LocalizedString DisplayText => T[Liyam.Localize.SOfUpdateIdentity];
 

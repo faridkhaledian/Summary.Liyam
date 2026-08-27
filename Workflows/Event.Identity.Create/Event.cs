@@ -6,17 +6,17 @@ using System.Collections.Generic;
 
 namespace Summary.Liyam.Workflows.Event.Identity.Create
 {
-    public class CreateIdentityEventInLiyam : EventActivity
+    public class CreateIdentityInLiyamEvent : EventActivity
     {
-        private readonly IStringLocalizer<CreateIdentityEventInLiyam> T;
+        private readonly IStringLocalizer<CreateIdentityInLiyamEvent> T;
 
-        public CreateIdentityEventInLiyam(
-            IStringLocalizer<CreateIdentityEventInLiyam> t)
+        public CreateIdentityInLiyamEvent(
+            IStringLocalizer<CreateIdentityInLiyamEvent> t)
         {
             T = t;
         }
 
-        public override string Name => nameof(CreateIdentityEventInLiyam);
+        public override string Name => nameof(CreateIdentityInLiyamEvent);
 
         public override LocalizedString DisplayText => T[Liyam.Localize.SOfCreateIdentity];
 

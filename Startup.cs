@@ -21,11 +21,11 @@ namespace Summary.Liyam
             services.AddScoped<IDisplayDriver<ISite>, LiyamSettingsDisplayDriver>();
             services.AddTransient<IConfigureOptions<LiyamSettings>, LiyamSettingsConfiguration>();
 
-            services.AddActivity<CreateProductEventInLiyamTask, CreateProductEventInLiyamDisplay>();
-            services.AddActivity<UpdateProductEventInLiyamTask, UpdateProductEventInLiyamDisplay>();
+            services.AddActivity<CreateProductInLiyamEvent, CreateProductInLiyamDisplay>();
+            services.AddActivity<UpdateProductInLiyamEvent, UpdateProductInLiyamDisplay>();
 
-            services.AddActivity<CreateIdentityEventInLiyam, CreateIdentityEventInLiyamDisplay>();
-            services.AddActivity<UpdateIdentityEventInLiyam, UpdateIdentityEventInLiyamDisplay>();
+            services.AddActivity<CreateIdentityInLiyamEvent, CreateIdentityInLiyamDisplay>();
+            services.AddActivity<UpdateIdentityInLiyamEvent, UpdateIdentityInLiyamDisplay>();
         }
     }
 }
