@@ -34,10 +34,10 @@ namespace Summary.Liyam
         public string BaseUnit_Lookup { get; set; }
         public int Ratio { get; set; }
         public string JsonData { get; set; }
-        public decimal GoodsAmount { get; set; }
+        public decimal? GoodsAmount { get; set; }
         public decimal LastBuyPrice { get; set; }
         public decimal LastSalePrice { get; set; }
-        public decimal Amount { get; set; }
+        public decimal? Amount { get; set; }
         public int? WarehouseId { get; set; }
         public string Warehouse_Title { get; set; }
         public string ServiceDetail_Lookup { get; set; }
@@ -91,6 +91,88 @@ namespace Summary.Liyam
         public int? CreatedUserID { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public int? ModifiedUserID { get; set; }
+    }
+
+    public class IdentitySubmitModel
+    {
+        public string EntityName { get; set; }
+        public string ActionType { get; set; }
+        public DetailEntity Entity { get; set; }
+    }
+
+    public class DetailEntity
+    {
+        public string Person_PersonTypeStr { get; set; }
+        public string Person_TaxStatusStr { get; set; }
+        public string LockedStr { get; set; }
+        public string IsSecretStr { get; set; }
+        public string Message { get; set; }
+        public int MessageType { get; set; }
+        public string FullCode { get; set; }
+        public string FullTitle { get; set; }
+        public double? DebtDiff { get; set; }
+        public double? CreditDiff { get; set; }
+        public double Diff { get; set; }
+        public string Cheque_Bank_Title { get; set; }
+        public string Cheque_Bank_FullCode { get; set; }
+        public string Cheque_Bank_Lookup { get; set; }
+        public int? StateId { get; set; }
+        public string State_Title { get; set; }
+        public string State_Lookup { get; set; }
+        public string City_Title { get; set; }
+        public string City_Lookup { get; set; }
+        public string ReferenceKey { get; set; }
+        public int UseCode { get; set; }
+        public string UseCodeStr { get; set; }
+        public string DetailGroupTitle { get; set; }
+        public int Level { get; set; }
+        public string Level5_Lookup { get; set; }
+        public string Level5_Title { get; set; }
+        public DateTime? CreatedDate { get; set; }
+        public int CreatedUserID { get; set; }
+        public DateTime? ModifiedDate { get; set; }
+        public int? ModifiedUserID { get; set; }
+        public int? Level5Id { get; set; }
+        public int DetailId { get; set; }
+        public int DetailCode { get; set; }
+        public string Title { get; set; }
+        public string Cheque_Bank { get; set; }
+        public int? Cheque_BankId { get; set; }
+        public int Person_PersonType { get; set; }
+        public string Person_Name { get; set; }
+        public string Person_FirstName { get; set; }
+        public string Person_LastName { get; set; }
+        public string Person_Brand { get; set; }
+        public string Person_NationalCode { get; set; }
+        public string Person_EconomicCode { get; set; }
+        public string Person_BranchCode { get; set; }
+        public int? Person_RegisterNo { get; set; }
+        public string Person_Address { get; set; }
+        public string Person_Phone { get; set; }
+        public string Person_Fax { get; set; }
+        public string Person_Mobile { get; set; }
+        public string Person_Email { get; set; }
+        public string Person_PostalCode { get; set; }
+        public string Person_AccountNumber { get; set; }
+        public string Person_CardNumber { get; set; }
+        public string Person_ShebaNumber { get; set; }
+        public string Person_Ceo { get; set; }
+        public string Person_FinantionalManager { get; set; }
+        public double? Person_ChequeCredit { get; set; }
+        public double? Person_AccountCredit { get; set; }
+        public string Description { get; set; }
+        public bool Locked { get; set; }
+        public string InActivityReason { get; set; }
+        public bool IsSecret { get; set; }
+        public object City { get; set; }
+        public int? CityId { get; set; }
+        public int? Person_TaxStatus { get; set; }
+        public object DetailGroup { get; set; }
+        public int DetailGroupId { get; set; }
+        public int? OrgUnitId { get; set; }
+        public object OrgUnit { get; set; }
+        public bool LimitedAccess { get; set; }
+        public object CostMode { get; set; }
     }
 
 }

@@ -1,0 +1,14 @@
+@model ActivityViewModel<Summary.Liyam.Workflows.Event.Identity.Create.CreateIdentityInLiyamEvent>
+
+@using Core.Workflows.Helpers
+@using Core.Workflows.ViewModels
+@using Summary.Liyam
+
+<header>
+    <h4>
+        @Model.Activity.GetTitleOrDefault(() => T[Liyam.Localize.SOfCreateIdentity])
+    </h4>
+    <em>
+        &quot;Liyam - Create Identity&quot;
+    </em>
+</header>

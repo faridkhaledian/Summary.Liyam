@@ -4,21 +4,21 @@ using Core.Workflows.Models;
 using Microsoft.Extensions.Localization;
 using System.Collections.Generic;
 
-namespace Summary.Liyam.Workflows.Event.Product.Create
+namespace Summary.Liyam.Workflows.Event.Identity.Update
 {
-    public class CreateProductInLiyamEvent : EventActivity
+    public class UpdateIdentityInLiyamEvent : EventActivity
     {
-        private readonly IStringLocalizer<CreateProductInLiyamEvent> T;
+        private readonly IStringLocalizer<UpdateIdentityInLiyamEvent> T;
 
-        public CreateProductInLiyamEvent(
-            IStringLocalizer<CreateProductInLiyamEvent> t)
+        public UpdateIdentityInLiyamEvent(
+            IStringLocalizer<UpdateIdentityInLiyamEvent> t)
         {
             T = t;
         }
 
-        public override string Name => nameof(CreateProductInLiyamEvent);
+        public override string Name => nameof(UpdateIdentityInLiyamEvent);
 
-        public override LocalizedString DisplayText => T[Liyam.Localize.SOfCreateProduct];
+        public override LocalizedString DisplayText => T[Liyam.Localize.SOfUpdateIdentity];
 
         public override LocalizedString Category => T[Liyam.Public.Category];
 
@@ -37,3 +37,4 @@ namespace Summary.Liyam.Workflows.Event.Product.Create
         }
     }
 }
+

@@ -37,8 +37,8 @@ namespace Summary.Liyam.Controller.Api.V1
             };
 
             var event_name = model.ActionType.ToLower() == "create" ?
-                nameof(CreateProductEventInLiyamTask) :
-                nameof(UpdateProductEventInLiyamTask);
+                nameof(CreateProductInLiyamEvent) :
+                nameof(UpdateProductInLiyamEvent);
 
             await _workflowManager.TriggerIntoDBAsync(event_name, inputs);
 
