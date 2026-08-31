@@ -18,6 +18,7 @@ namespace Summary.Liyam.Controllers.Api.V1
     public class IdentityController : ControllerBase
     {
         private readonly IWorkflowManager _workflowManager;
+
         public IdentityController(
             IWorkflowManager workflowManager)
         {
