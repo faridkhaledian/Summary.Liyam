@@ -34,10 +34,10 @@ namespace Summary.Liyam
         public string BaseUnit_Lookup { get; set; }
         public int Ratio { get; set; }
         public string JsonData { get; set; }
-        public decimal GoodsAmount { get; set; }
+        public decimal? GoodsAmount { get; set; }
         public decimal LastBuyPrice { get; set; }
         public decimal LastSalePrice { get; set; }
-        public decimal Amount { get; set; }
+        public decimal? Amount { get; set; }
         public int? WarehouseId { get; set; }
         public string Warehouse_Title { get; set; }
         public string ServiceDetail_Lookup { get; set; }
@@ -169,7 +169,7 @@ namespace Summary.Liyam
         public int? Person_TaxStatus { get; set; }
         public object DetailGroup { get; set; }
         public int DetailGroupId { get; set; }
-        public int OrgUnitId { get; set; }
+        public int? OrgUnitId { get; set; }
         public object OrgUnit { get; set; }
         public bool LimitedAccess { get; set; }
         public object CostMode { get; set; }

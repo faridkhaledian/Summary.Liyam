@@ -2,6 +2,6 @@ using Core.Workflows.Display;
 
 namespace Summary.Liyam.Workflows.Event.Product.Create
 {
-    public class CreateProductEventInLiyamDisplay : ActivityDisplayDriver<CreateProductEventInLiyamTask>
+    public class CreateProductInLiyamDisplay : ActivityDisplayDriver<CreateProductInLiyamEvent>
     { }
 }

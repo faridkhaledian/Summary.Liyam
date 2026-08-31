@@ -41,8 +41,8 @@ namespace Summary.Liyam.Controllers.Api.V1
             };
 
             var event_name = model.ActionType.ToLower() == "create" ?
-                nameof(CreateIdentityEventInLiyam) :
-                nameof(UpdateIdentityEventInLiyam);
+                nameof(CreateIdentityInLiyamEvent) :
+                nameof(UpdateIdentityInLiyamEvent);
 
             await _workflowManager.TriggerIntoDBAsync(event_name, inputs);
 
