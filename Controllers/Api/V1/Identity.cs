@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Core.Workflows.Services;
 using System.Collections.Generic;
@@ -19,6 +18,7 @@ namespace Summary.Liyam.Controllers.Api.V1
     public class IdentityController : ControllerBase
     {
         private readonly IWorkflowManager _workflowManager;
+
         public IdentityController(
             IWorkflowManager workflowManager)
         {
@@ -34,7 +34,7 @@ namespace Summary.Liyam.Controllers.Api.V1
                 { "Liyam.Identity.Code", model.Entity.FullCode },
                 { "Liyam.Identity.Title", model.Entity.Title },
                 { "Liyam.Identity.Category", model.Entity.DetailGroupTitle },
-                { "Liyam.Identity.PersonType", model.Entity.Person_PersonTypeStr },
+                { "Liyam.Identity.Type", model.Entity.Person_PersonTypeStr },
                 { "Liyam.Identity.NationalCode", model.Entity.Person_NationalCode },
                 { "Liyam.Identity.Mobile", model.Entity.Person_Mobile },
                 { "Liyam.Identity.Email", model.Entity.Person_Email }
