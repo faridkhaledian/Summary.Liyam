@@ -12,15 +12,12 @@ namespace Summary.Liyam.Workflows.Task.Person.Create
     public class CreatePersonInLiyamTask : TaskActivity
     {
         private readonly IStringLocalizer<CreatePersonInLiyamTask> T;
-        private readonly ILogger<CreatePersonInLiyamTask> _logger;
         private readonly IPersonService _person;
 
         public CreatePersonInLiyamTask(IStringLocalizer<CreatePersonInLiyamTask> t,
-            ILogger<CreatePersonInLiyamTask> logger,
             IPersonService person)
         {
             T = t;
-            _logger = logger;
             _person = person;
         }
 

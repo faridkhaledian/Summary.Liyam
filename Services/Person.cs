@@ -163,7 +163,7 @@ namespace Summary.Liyam.Services
             int stateId,
             string description)
         {
-            string PersonType = 1;
+            string PersonType = "1";
 
             var token = await GenerateTokenAsync();
 
