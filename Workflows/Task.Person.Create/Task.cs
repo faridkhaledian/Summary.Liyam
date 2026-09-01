@@ -23,9 +23,9 @@ namespace Summary.Liyam.Workflows.Task.Person.Create
 
         public override string Name => nameof(CreatePersonInLiyamTask);
 
-        public override LocalizedString DisplayText => T[Shopfa.Localize.SOfCreatePerson];
+        public override LocalizedString DisplayText => T[Liyam.Localize.DOfCreatePerson];
 
-        public override LocalizedString Category => T[Shopfa.Public.Category];
+        public override LocalizedString Category => T[Liyam.Public.Category];
 
         public string Title
         {
@@ -120,7 +120,7 @@ namespace Summary.Liyam.Workflows.Task.Person.Create
         public override IEnumerable<Outcome> GetPossibleOutcomes(WorkflowExecutionContext workflowContext,
             ActivityContext activityContext)
         {
-            return Outcomes(T[Shopfa.Workflows.Done]);
+            return Outcomes(T[Liyam.Workflows.Done]);
         }
 
         public override async Task<ActivityExecutionResult> ExecuteAsync(WorkflowExecutionContext workflowContext,
