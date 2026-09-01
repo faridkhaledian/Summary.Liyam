@@ -188,11 +188,12 @@ namespace Summary.Liyam.Services
              });
 
             await _client.SendPostRequestAsync<object>(
-                $"{_options.ApiAddress}/Detail/Create",
-                form,
-                new KeyValuePair<string, string>("Authorization", $"Bearer {token}")
+              $"{_options.ApiAddress}/Detail/Create",
+              form,
+              new KeyValuePair<string, string>("Authorization", $"Bearer {token}"),
+              "application/x-www-form-urlencoded",
+              true
             );
         }
     }
-
 }
